@@ -1,17 +1,19 @@
 <template>
-  <div>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <div id="app">
+    <!-- <keep-alive>
+      <router-view v-if="$route.meta.keepAlive"></router-view>
+    </keep-alive> -->
+    <router-view></router-view>
+    <Foo />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Foo from './components/Foo.vue'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    Foo
   }
 }
 </script>
