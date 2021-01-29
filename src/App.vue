@@ -12,8 +12,11 @@
 import Foo from './components/Foo.vue'
 export default {
   name: 'App',
-  components:{
+  components: {
     Foo
+  },
+  setup () {
+    // provide('数据名称', 要传递的数据)
   }
 }
 </script>

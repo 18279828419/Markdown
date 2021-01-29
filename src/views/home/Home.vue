@@ -15,15 +15,15 @@
 import { reactive, onMounted } from 'vue';
 import { useRouter } from 'vue-router'
 export default {
-  name: null,
   components: {},
   setup () {
     const router = useRouter()
     const state = reactive({});
     onMounted(() => { });
     const images = [
-      'https://img.yzcdn.cn/vant/apple-1.jpg',
-      'https://img.yzcdn.cn/vant/apple-2.jpg',
+      'https://muxin-1258803575.cos.ap-guangzhou.myqcloud.com/banner3.jpg',
+      'https://muxin-1258803575.cos.ap-guangzhou.myqcloud.com/banner2.jpg',
+      'https://muxin-1258803575.cos.ap-guangzhou.myqcloud.com/banner1.jpg',
     ];
     return { state, images };
   }

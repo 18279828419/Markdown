@@ -1,6 +1,6 @@
 <template>
   <div class="foo">
-    <van-tabbar v-model="state.active">
+    <van-tabbar @change="activeFun" v-model="state.active">
       <van-tabbar-item icon="home-o">主页</van-tabbar-item>
       <van-tabbar-item icon="search">查找</van-tabbar-item>
       <van-tabbar-item icon="audio">音乐</van-tabbar-item>
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+// 子组件导入 inject
 import { reactive, onMounted } from 'vue';
 export default {
   name: 'foo',
@@ -17,10 +18,14 @@ export default {
   },
   setup () {
     const state = reactive({
-      active:''
+      active: 0
     });
-    onMounted(() => { });
-    return { state };
+    let activeFun = ()=>{
+      console.log(state.active)
+    }
+    onMounted(() => {
+    });
+    return { state,activeFun };
   }
 
 }
